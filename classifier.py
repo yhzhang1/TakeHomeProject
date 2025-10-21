@@ -51,7 +51,6 @@ def main():
 
     feature_importance(models['xgb'], feature_names)
 
-
 def split_dataset(X, y, sample_weight):
     X_train, X_test, y_train, y_test, sample_weight_train, sample_weight_test = train_test_split(X, y, sample_weight, test_size=0.3, stratify=y)
     X_validation, X_test, y_validation, y_test, sample_weight_validation, sample_weight_test = train_test_split(X_test, y_test, sample_weight_test, test_size=2/3, stratify=y_test)
